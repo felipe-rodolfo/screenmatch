@@ -9,7 +9,7 @@ public class Main {
         myMovie.setRating(8);
         myMovie.setRating(5);
         myMovie.setRating(10);
-        System.out.println(myMovie.totalRating);
+        System.out.println(myMovie.getTotalRating());
         System.out.println(myMovie.avarageRating());
     }
 }
