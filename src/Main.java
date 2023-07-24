@@ -12,5 +12,12 @@ public class Main {
         myMovie.setRating(10);
         System.out.println(myMovie.getTotalRating());
         System.out.println(myMovie.avarageRating());
+
+        Serie lost = new Serie();
+        lost.setName("Lost");
+        lost.setReleaseYear(2000);
+        lost.showCredits();
+        lost.setSeason(10);
+        lost.setEpisodesPerSeason(10);
     }
 }
