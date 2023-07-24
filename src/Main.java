@@ -2,9 +2,9 @@ import br.com.felipe.screenmatch.models.*;
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
-        myMovie.name = "O poderoso chefão";
-        myMovie.releaseYear = 7970;
-        myMovie.totalMinutes = 180;
+        myMovie.setName("O poderoso chefão");
+        myMovie.setReleaseYear(7970);
+        myMovie.setTotalMinutes(180);
 
         myMovie.showCredits();
         myMovie.setRating(8);

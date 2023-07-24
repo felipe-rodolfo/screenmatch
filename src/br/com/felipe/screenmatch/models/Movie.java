@@ -1,13 +1,33 @@
 package br.com.felipe.screenmatch.models;
 public class Movie {
-    String name;
-    int releaseYear;
-    boolean includedInThePlan;
+    private String name;
+    private int releaseYear;
+    private boolean includedInThePlan;
     private double rating;
     private int totalRating;
     int totalMinutes;
 
-    int getTotalRating(){
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    public void setIncludedInThePlan(boolean includedInThePlan) {
+        this.includedInThePlan = includedInThePlan;
+    }
+
+    public void setTotalMinutes(int totalMinutes) {
+        this.totalMinutes = totalMinutes;
+    }
+
+    public int getTotalRating(){
         return this.totalRating;
     }
 
