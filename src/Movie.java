@@ -1,8 +1,10 @@
 public class Movie {
-    String nome;
+    String name;
     int releaseYear;
     boolean includedInThePlan;
     double rating;
     int totalRating;
     int totalMinutes;
+
+
 }
