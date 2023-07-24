@@ -5,7 +5,11 @@ public class Main {
         myMovie.releaseYear = 7970;
         myMovie.totalMinutes = 180;
 
-        System.out.println(myMovie.name);
-        System.out.println(myMovie.releaseYear);
+        myMovie.showCredits();
+        myMovie.setRating(8);
+        myMovie.setRating(5);
+        myMovie.setRating(10);
+        System.out.println(myMovie.totalRating);
+        System.out.println(myMovie.avarageRating());
     }
 }
