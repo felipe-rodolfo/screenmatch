@@ -1,3 +1,4 @@
+package br.com.felipe.screenmatch.models;
 public class Movie {
     String name;
     int releaseYear;
@@ -10,17 +11,17 @@ public class Movie {
         return this.totalRating;
     }
 
-    void showCredits(){
+    public void showCredits(){
         System.out.println("Movie name: " + name);
         System.out.println("Release year: " + releaseYear);
     }
 
-    void setRating (double rating){
+    public void setRating (double rating){
         this.rating += rating;
         totalRating++;
     }
 
-    double avarageRating(){
+    public double avarageRating(){
         return rating / totalRating;
     }
 }

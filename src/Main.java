@@ -1,3 +1,4 @@
+import br.com.felipe.screenmatch.models.*;
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
