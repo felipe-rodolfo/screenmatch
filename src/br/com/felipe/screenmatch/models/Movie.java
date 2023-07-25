@@ -11,6 +11,6 @@ public class Movie extends Media implements Classifiable {
 
     @Override
     public int getClaassifiable() {
-        return ;
+        return (int) getTotalRating() / 2;
     }
 }
