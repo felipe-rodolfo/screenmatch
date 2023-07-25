@@ -1,8 +1,16 @@
 package br.com.felipe.screenmatch.models;
-public class Movie extends Media{
+
+import br.com.alura.screenmatch.calculos.Classifiable;
+
+public class Movie extends Media implements Classifiable {
    private String director;
 
     public String getDirector() {
         return director;
+    }
+
+    @Override
+    public int getClaassifiable() {
+        return ;
     }
 }
