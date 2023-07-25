@@ -21,4 +21,9 @@ public class Serie extends Media {
     public void setMinutesPerEpisode(int minutesPerEpisode) {
         this.minutesPerEpisode = minutesPerEpisode;
     }
+
+    @Override
+    public int getTotalMinutes() {
+        return this.season * this.episodesPerSeason * this.minutesPerEpisode;
+    }
 }

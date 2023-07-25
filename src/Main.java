@@ -19,5 +19,8 @@ public class Main {
         lost.showCredits();
         lost.setSeason(10);
         lost.setEpisodesPerSeason(10);
+        lost.setMinutesPerEpisode(30);
+        lost.setTotalMinutes(50);
+        System.out.println(lost.getTotalMinutes());
     }
 }

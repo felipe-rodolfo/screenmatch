@@ -28,6 +28,10 @@ public class Media {
         this.totalMinutes = totalMinutes;
     }
 
+    public int getTotalMinutes() {
+        return this.totalMinutes;
+    }
+
     public int getTotalRating(){
         return this.totalRating;
     }
