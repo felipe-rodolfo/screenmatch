@@ -8,6 +8,11 @@ public class Media {
     private int totalRating;
     int totalMinutes;
 
+    public Media(String name, int releaseYear) {
+        this.name = name;
+        this.releaseYear = releaseYear;
+    }
+
     public String getName() {
         return name;
     }

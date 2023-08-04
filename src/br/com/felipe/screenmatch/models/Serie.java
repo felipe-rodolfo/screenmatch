@@ -6,6 +6,10 @@ public class Serie extends Media {
     private int episodesPerSeason;
     private int minutesPerEpisode;
 
+    public Serie(String name, int releaseYear){
+        super(name, releaseYear);
+    }
+
     public void setSeason(int season) {
         this.season = season;
     }

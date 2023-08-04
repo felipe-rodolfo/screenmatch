@@ -6,9 +6,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("O poderoso chefão");
-        myMovie.setReleaseYear(7970);
+        Movie myMovie = new Movie("O poderoso chefão", 7970);
         myMovie.setTotalMinutes(180);
 
         myMovie.showCredits();
@@ -18,9 +16,7 @@ public class Main {
         System.out.println(myMovie.getTotalRating());
         System.out.println(myMovie.avarageRating());
 
-        Serie lost = new Serie();
-        lost.setName("Lost");
-        lost.setReleaseYear(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.showCredits();
         lost.setSeason(10);
         lost.setEpisodesPerSeason(10);
@@ -28,9 +24,7 @@ public class Main {
         lost.setTotalMinutes(50);
         System.out.println(lost.getTotalMinutes());
 
-        Movie paulMovie = new Movie();
-        paulMovie.setName("Dogville");
-        paulMovie.setReleaseYear(2003);
+        Movie paulMovie = new Movie("Dogville", 2003);
         paulMovie.setTotalMinutes(200);
         paulMovie.setRating(10);
 
