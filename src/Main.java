@@ -1,6 +1,9 @@
 import br.com.alura.screenmatch.calculos.Recommendation;
 import br.com.alura.screenmatch.calculos.TimeCalculator;
 import br.com.felipe.screenmatch.models.*;
+
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
@@ -24,6 +27,20 @@ public class Main {
         lost.setMinutesPerEpisode(30);
         lost.setTotalMinutes(50);
         System.out.println(lost.getTotalMinutes());
+
+        Movie paulMovie = new Movie();
+        paulMovie.setName("Dogville");
+        paulMovie.setReleaseYear(2003);
+        paulMovie.setTotalMinutes(200);
+        paulMovie.setRating(10);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(paulMovie);
+        movieList.add(myMovie);
+
+        System.out.println("Size List: " + movieList.size());
+        System.out.println("First movie: " + movieList.get(0).getName());
+        System.out.println("Movie toString: " + movieList.get(0).toString());
 
         TimeCalculator calculator = new TimeCalculator();
         calculator.includes(myMovie);
