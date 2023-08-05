@@ -30,4 +30,9 @@ public class Serie extends Media {
     public int getTotalMinutes() {
         return this.season * this.episodesPerSeason * this.minutesPerEpisode;
     }
+
+    @Override
+    public String toString() {
+        return "Serie: " + this.getName();
+    }
 }

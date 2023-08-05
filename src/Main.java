@@ -28,14 +28,6 @@ public class Main {
         paulMovie.setTotalMinutes(200);
         paulMovie.setRating(10);
 
-        ArrayList<Movie> movieList = new ArrayList<>();
-        movieList.add(paulMovie);
-        movieList.add(myMovie);
-
-        System.out.println("Size List: " + movieList.size());
-        System.out.println("First movie: " + movieList.get(0).getName());
-        System.out.println("Movie toString: " + movieList.get(0).toString());
-
         TimeCalculator calculator = new TimeCalculator();
         calculator.includes(myMovie);
         System.out.println(calculator.getTotalTime());

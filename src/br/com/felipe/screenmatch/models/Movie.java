@@ -17,4 +17,9 @@ public class Movie extends Media implements Classifiable {
     public int getClaassifiable() {
         return (int) getTotalRating() / 2;
     }
+
+    @Override
+    public String toString() {
+        return "Movie: " + this.getName();
+    }
 }
