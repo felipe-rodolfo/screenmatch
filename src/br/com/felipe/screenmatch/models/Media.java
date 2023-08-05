@@ -1,6 +1,6 @@
 package br.com.felipe.screenmatch.models;
 
-public class Media {
+public class Media implements Comparable<Media>{
     private String name;
     private int releaseYear;
     private boolean includedInThePlan;
@@ -53,5 +53,10 @@ public class Media {
 
     public double avarageRating(){
         return rating / totalRating;
+    }
+
+    @Override
+    public int compareTo(Media otherMedia) {
+        return this.getName().compareTo(otherMedia.getName());
     }
 }
