@@ -1,5 +1,6 @@
 package br.com.felipe.screenmatch.models;
 
+import br.com.felipe.screenmatch.exception.ConversionYearErrorException;
 import com.google.gson.annotations.SerializedName;
 
 public class Media implements Comparable<Media>{
@@ -17,6 +18,10 @@ public class Media implements Comparable<Media>{
 
     public Media(MediaOmdb myMediaomdb) {
         this.name = myMediaomdb.title();
+
+        if(myMediaomdb.year().length() > 4){
+            throw new ConversionYearErrorException("so many caracteres");
+        }
         this.releaseYear = Integer.valueOf(myMediaomdb.year());
         this.totalMinutes = Integer.valueOf(myMediaomdb.runtime().substring(0, 3));
     }
