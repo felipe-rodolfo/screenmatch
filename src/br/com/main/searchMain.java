@@ -1,5 +1,11 @@
 package br.com.main;
 
+import br.com.felipe.screenmatch.models.Media;
+import br.com.felipe.screenmatch.models.MediaOmdb;
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -22,5 +28,14 @@ public class searchMain {
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        //Media myMedia = gson.fromJson(response.body(), Media.class);
+        MediaOmdb myMediaomdb = gson.fromJson(response.body(), MediaOmdb.class);
+        System.out.println("Media: " + myMediaomdb);
+
+        Media myMedia = new Media(myMediaomdb);
+        System.out.println(myMedia);
     }
 }

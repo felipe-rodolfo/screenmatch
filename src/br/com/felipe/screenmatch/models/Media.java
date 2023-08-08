@@ -1,5 +1,7 @@
 package br.com.felipe.screenmatch.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Media implements Comparable<Media>{
     private String name;
     private int releaseYear;
@@ -11,6 +13,12 @@ public class Media implements Comparable<Media>{
     public Media(String name, int releaseYear) {
         this.name = name;
         this.releaseYear = releaseYear;
+    }
+
+    public Media(MediaOmdb myMediaomdb) {
+        this.name = myMediaomdb.title();
+        this.releaseYear = Integer.valueOf(myMediaomdb.year());
+        this.totalMinutes = Integer.valueOf(myMediaomdb.runtime().substring(0, 3));
     }
 
     public String getName() {
@@ -58,5 +66,12 @@ public class Media implements Comparable<Media>{
     @Override
     public int compareTo(Media otherMedia) {
         return this.getName().compareTo(otherMedia.getName());
+    }
+
+    public String toString(){
+        return "Media {"+
+                "nome=' " + name + '\'' +
+                ", year= " + releaseYear + '\'' +
+                ", duration= " + totalMinutes;
     }
 }
